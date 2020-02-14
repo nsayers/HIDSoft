@@ -1,0 +1,21 @@
+builddumpcards.cc 178 BuildCards version 2.10.4
+builddumpcards.cc 181 Files:
+Cards file=/tmp/InputCards
+Formats file=/usr/local/sbin/HIDSoft/bin/FormatsDefault
+Card Sets file=/usr/local/sbin/HIDSoft/bin/out-Sets
+Ident file=/usr/local/sbin/HIDSoft/bin/NewIdentDB
+Access file=/usr/local/sbin/HIDSoft/bin/NewAccessDB
+Log file=/usr/local/sbin/HIDSoft/bin/out-Log
+inputcards.cc 239 Load fmtid=1 fmtfile=h10301_99.vff
+VffCardFormat.cc 310 load VFF file h10301_99.vff
+VffCardFormat.cc 420 Format loaded h10301_99.vff
+card_functions.cc 169 no format card bits
+02 C4 AC 57 00 00 00 00 00 00 00 00 00 00 00 00 
+inputcards.cc 461 dupnoformat line#=2
+inputcards.cc 369 Number of cards=1
+card_functions.cc 169 no format card bits
+02 C4 AC 57 00 00 00 00 00 00 00 00 00 00 00 00 
+inputcards.cc 1112 pcd=0 acclvl[0]=1 
+inputcards.cc 1114 unqid=1 acclvl[1]=2 
+inputcards.cc 1046 noformatcardline card=02C4AC57000000000000000000000000 line#=2
+builddumpcards.cc 213 BuildCards Complete, result=0
