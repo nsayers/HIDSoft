@@ -31,28 +31,63 @@ HIDSoft is the control server for HID card readers and related tooling. This REA
 
    If you use ufw/iptables, open the equivalent port there.
 
-## systemd service (example)
+## systemd service
 
-Create `/etc/systemd/system/HIDSoft.service` and replace `<executable>` below with the actual server executable or start script in `/usr/local/sbin/HIDSoft/bin`.
+There is a unit file included in the repository root as `HIDSoft.service`. The packaged unit already uses `After=mariadb.service` so systemd will start this service after the database unit, but depending on how you want system behavior to respond to the database, you may want to adjust the unit in one of these ways:
 
-```ini name=/etc/systemd/system/HIDSoft.service
+- Add `Requires=mariadb.service` to make systemd treat MariaDB as required (this unit will fail if MariaDB fails to start).
+- Use `Wants=mariadb.service` if you want systemd to try to start MariaDB but not treat its failure as fatal.
+
+Also ensure `ExecStart` uses absolute paths (both the ruby binary and the script) so systemd can execute the process reliably.
+
+To use the packaged unit file:
+
+1. Copy the service file to systemd's unit directory:
+
+   sudo cp HIDSoft.service /etc/systemd/system/HIDSoft.service
+
+2. Inspect the file and update paths or dependency behavior if needed. The repo's `HIDSoft.service` contains the following settings:
+
+```ini name=HIDSoft.service url=https://github.com/nsayers/HIDSoft/blob/main/HIDSoft.service
 [Unit]
-Description=HIDSoft control server
-After=network.target
+Description=HID Card Reader Software
+After=network.target mariadb.service
 
 [Service]
-Type=simple
 User=cardreader
 Group=cardreader
 WorkingDirectory=/usr/local/sbin/HIDSoft
-ExecStart=/usr/local/sbin/HIDSoft/bin/<executable>
 Restart=on-failure
+ExecStart=/usr/bin/ruby rubyserv.rb debug
 
 [Install]
 WantedBy=multi-user.target
 ```
 
-Then enable and start the service:
+Suggested edits (optional) — copy into the unit file to make the DB dependency explicit and use absolute paths:
+
+```ini
+[Unit]
+Description=HID Card Reader Software
+Requires=mariadb.service
+After=network.target mariadb.service
+
+[Service]
+User=cardreader
+Group=cardreader
+WorkingDirectory=/usr/local/sbin/HIDSoft
+Restart=on-failure
+ExecStart=/usr/bin/ruby /usr/local/sbin/HIDSoft/rubyserv.rb debug
+
+[Install]
+WantedBy=multi-user.target
+```
+
+Notes:
+- On some systems the DB unit is named `mysql.service` instead of `mariadb.service`; adjust the Requires/After lines to match your distribution.
+- If you prefer systemd not to fail the HIDSoft unit when DB fails to start, use `Wants=` instead of `Requires=`.
+
+3. Reload systemd and enable/start the service:
 
    sudo systemctl daemon-reload
    sudo systemctl enable --now HIDSoft.service
