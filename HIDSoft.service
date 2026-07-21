@@ -1,0 +1,13 @@
+[Unit]
+Description=HID Card Reader Software
+After=network.target mariadb.service
+
+[Service]
+User=cardreader
+Group=cardreader
+WorkingDirectory=/usr/local/sbin/HIDSoft
+Restart=on-failure
+ExecStart=/usr/bin/ruby rubyserv.rb debug
+
+[Install]
+WantedBy=multi-user.target
