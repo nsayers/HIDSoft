@@ -1,0 +1,33 @@
+# Setup the header of the file, cause we do want to be consistent
+# Schedules configuration file
+# i=interval definition   i S D I H1 M1 S1 H2 M2 S2
+# h=holiday definition
+# S=schedule id
+# D=day code (0=Sun, 1=Mon, 2=Tue, 3=Wed, 4=Thurs, 5=Fri, 6=Sat)
+#    D=day code:holiday (1=Holiday Group 1, 2=Holiday Group 2, ....
+# I=interval (0 to 5)
+# H1 M1 S1 = Start Hour Min Sec (0 0 0 to 23 59 59)
+# H2 M2 S2 = Stop Hour Min Sec (0 0 0 to 23 59 59)
+# i S D I H1 M1 S1 H2 M2 S2
+# Sched 2
+i 2 0 0 0 0 0 23 59 59  # Allow users with Credentials, regardless of schedule 
+i 2 1 0 0 0 0 23 59 59  # Allow users with Credentials, regardless of schedule 
+i 2 2 0 0 0 0 23 59 59  # Allow users with Credentials, regardless of schedule 
+i 2 3 0 0 0 0 23 59 59  # Allow users with Credentials, regardless of schedule 
+i 2 4 0 0 0 0 23 59 59  # Allow users with Credentials, regardless of schedule 
+i 2 5 0 0 0 0 23 59 59  # Allow users with Credentials, regardless of schedule 
+i 2 6 0 0 0 0 23 59 59  # Allow users with Credentials, regardless of schedule 
+h 2 1 0 0 0 0 23 59 59  # Allow users with Credentials, regardless of schedule 
+h 2 2 0 0 0 0 23 59 59  # Allow users with Credentials, regardless of schedule 
+# Sched 1
+i 1 0 0 0 0 0 0 0 0  # Schedule unlock name : Default 
+i 1 1 0 0 0 0 0 0 0  # Schedule unlock name : Default 
+i 1 2 0 0 0 0 0 0 0  # Schedule unlock name : Default 
+i 1 3 0 0 0 0 0 0 0  # Schedule unlock name : Default 
+i 1 4 0 0 0 0 0 0 0  # Schedule unlock name : Default 
+i 1 5 0 0 0 0 0 0 0  # Schedule unlock name : Default 
+i 1 6 0 0 0 0 0 0 0  # Schedule unlock name : Default 
+h 1 1 0 0 0 0 0 0 0  # Holiday unlock name : Default Locked 
+h 1 2 0 0 0 0 0 0 0  # Holiday unlock name : Test 
+h 1 2 1 9 50 0 17 0 0  # Holiday unlock name : Test 
+

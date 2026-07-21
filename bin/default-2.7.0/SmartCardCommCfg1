@@ -1,0 +1,44 @@
+# configuration file for the smartcardcomm
+# devicename - is the 2nd parameter on the command line. It is NOT
+# included in the configuration file
+# acsmode -   1 poll for hid app, 0 - do not poll for hid app
+acsmode 1
+# hidapptopp - 1 send the hid app data (card number) to the host app,
+#  0 - do not send the hid app data to the host app
+hidapptoapp 0
+# csntoapp - 1- poll for the csn and send it to the host app,
+#  0 - do not poll for the csn
+csntoapp 1
+# pagentoapp - 1 - read pagen data and send it to the host app (while
+#  scanning for a card, 0 - do not read page n data
+pagentoapp 0
+# baudrate of reader for VertX this can be at most 38400
+baudrate 38400
+# parity of reader E O or N
+parity E
+# number of data bits
+databits 8
+# number of stop bits (an IClass reader has the equivalent of 2 stop bits)
+stopbits 2
+# macromode - determines which set of macros to configure
+macromode 1
+# acsreader - access control system reader address 0 or 1. NOTE that the
+# smartcardcomm assumes that the reader location is (1,0,acsreader)
+acsreader 0
+#readtimeout - read timeout in millseconds for the reader device
+readtimeout 500
+# page n read parameters the reader must be properly set up
+# uncomment and edit the configuration lines
+# application area to read
+# area 1
+# book to read 
+# book 0
+# page to read
+# page 1
+# start block
+# startblock 25
+# number of blocks to read 
+# numberblocks 2
+# reader key
+# readerkey
+

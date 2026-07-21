@@ -1,0 +1,9 @@
+# Msg Priority configuration file
+# Associate priority with user defined class codes
+# ClassCode(1-255) Priority(0-255) 
+# bit bucket
+      5                0
+# event 
+     10               100 
+# alarm
+     20               200 

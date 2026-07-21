@@ -1,0 +1,9 @@
+# this file contains the locations information of important data that can be 
+# obtained by reading the bronze board. It is common for all bronzes
+#fieldname hexloc type nbytes format
+bronzeid   0x7fec e    4      d
+eevers     0x7fe8 e    4      a
+brtype     0x1ef2 r    12     a 
+apvers     0x1ef8 r    8      a
+btldvers   0x1efc r    8      a
+atodtbls   0x7710 e    40     a

@@ -1,0 +1,37 @@
+# Event generation information file (only for testing purposes)
+#
+# Access task needs stopping and then running manually with extra parameter to do automatic events generation based on this file.
+# Stop accesstask either by issuing API command OR running this "/etc/init.d/access stop" command in terminal on controller.
+# Then run accesstask using command mentioned below from controller terminal:
+#       # /mnt/apps/bin/accesstask /mnt/apps/data/config/CfgFile stderr 0 autoevent
+# Running using above command will run access which reads/parse this file at location "/mnt/apps/data/config/GenEventsInfo" and generate events
+# through event-logger and when done exit. So no accesstask will be running after automatic event generation. So either use API to
+# restart accesstask OR run this "/etc/init.d/access restart" command in terminal on controller
+#
+#
+# Start of event generation file:
+#
+# Here each single entry line represent a single type and parameter event. 
+# Same event type can be repeated multiple times again on new line with different parameters.
+#
+#
+# Fields required are:
+#
+# Count: number of times that event needs to be generated
+# Delay: Is delay (in milliseconds) between each event generation
+# Task: Task code (number, only few supported for now: 1, 2)
+# Type: Event type code (number, should be valid and same as defined in 2.3.1 API document)
+# Message: Message Type/ID (number, only few are supported for now: 1 - 6, 27, 41, 44)
+# Additional Fields: Extra fields for event, should follow what is in API document otherwise unexpected application behviour
+# 
+
+# Count  Delay     Task  Type  Message   Additional-Fields ...... 
+# [Repeat 10 times with 0 ms dealy] Access task, Below is Grant access example for interface 0, reader 0 and unique-id 5
+    10     0         2    20      1      0 0 5 
+# [Repeat 5 times with 1000 ms dealy] Access task, Deny access example with unique-id 3
+     5     1000      2    27      1      0 1 3
+# [Repeat 10000 times with 0 ms dealy] Identification task, host lookup example with hexcardpin and nbits
+   10000   0         1    40      2      0 0 00C1C600 32
+# [Repeat 100000 times with 0 ms dealy] Access task, Deny access wrong pin 
+   100000   0         2    29      3      0 1 7 1234
+

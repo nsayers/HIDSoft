@@ -1,0 +1,39 @@
+# Main Configuration File
+# Each task uses this file to load the proper
+# configuration files for that task
+ident      /mnt/flash/TaskConfig/IdentDB   10000
+access     /mnt/flash/TaskConfig/AccessDB   10000
+newident   /mnt/flash/TaskConfig/NewIdentDB  0
+newaccess  /mnt/flash/TaskConfig/NewAccessDB  0
+#
+accesslvls    /mnt/flash/TaskConfig/AccessGroups  10
+cardsets  /mnt/flash/TaskConfig/CardSets  25 
+commcfg       /mnt/flash/TaskConfig/CommCfg
+commhosts     /mnt/flash/TaskConfig/CommHosts  0
+doorpriority  /mnt/flash/TaskConfig/DoorPriority  0
+doorgroups    /mnt/flash/TaskConfig/DoorGroups  5
+elevator      /mnt/flash/TaskConfig/Elevator  10
+eventlog      /mnt/flash/TaskConfig/EventLog  0
+eventmsg      /mnt/flash/TaskConfig/EventMsg  0
+fmts          /mnt/flash/TaskConfig/Formats  15 
+heartbeat     /mnt/flash/TaskConfig/Heartbeat  0
+hereiam       /mnt/flash/TaskConfig/HereIAm  0 
+holidays      /mnt/flash/TaskConfig/Holidays  12
+interfacetypes   /mnt/flash/TaskConfig/InterfaceTypes  3
+interfaceboards  /mnt/flash/TaskConfig/InterfaceBoards  32
+iolinkerrules /mnt/flash/TaskConfig/IOLinkerRules
+iolinkercommands /etc/iolinker.conf 
+keypads       /mnt/flash/TaskConfig/KeyPadFile  0 
+msgpriority   /mnt/flash/TaskConfig/MsgPriority  0
+outputgroups  /mnt/flash/TaskConfig/OutputGroups  10 
+pinreaders    /mnt/flash/TaskConfig/PinReaders  2
+ptpport x 9000
+ptpgateways   /mnt/flash/TaskConfig/PTPGateways  0
+ptpadjreaders /mnt/flash/TaskConfig/PTPAdjacentReaders  0
+readers       /mnt/flash/TaskConfig/Readers  64
+rs485cfg      /mnt/flash/TaskConfig/rs485Params  0
+savedoutputs  /mnt/flash/TaskConfig/SavedOutputs
+schedules     /mnt/flash/TaskConfig/Schedules  4
+updatestatus x 1
+watchdog      /mnt/flash/TaskConfig/Watchdog  0
+multimanrules /mnt/flash/TaskConfig/MultiManRules

@@ -1,0 +1,4 @@
+# Door Priority configuration file
+#  IID  IF  Reader/Door(0-1)  Priority(1-255) 
+    1   0         0                 20      
+    1   0         1                 45     

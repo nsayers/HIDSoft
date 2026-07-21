@@ -1,0 +1,4 @@
+# Door Groups configuration file 
+# dgid NumReaders RdrID1 RdrID2 RdrID3 ...
+    1      2        1      2
+    2      1        1

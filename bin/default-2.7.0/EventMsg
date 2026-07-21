@@ -1,0 +1,180 @@
+# Event Msg configuration file
+# Associate each task event with a class code
+# DO NOT change TaskCodes or EventCodes
+# TaskCode(1-255)  EventCode(1-255)  ClassCode(1-255)
+# identtask start
+        1                1                10
+# identtask deny access (card/PIN not found)
+        1               22                20
+# identtask deny access (unknown reader)
+        1               26                20
+# identtask deny access (card/PIN deleted)
+        1               27                20
+# identtask card number found
+        1               28                 5
+# identtask host lookup
+        1               40                20
+# identtask card updated
+        1               50                 5
+# identtask database changeover
+        1               55                 5
+# accesstask start
+        2                1                10
+# accesstask grant access
+        2               20                20
+# accesstask grant access (extended)
+        2               21                20
+# accesstask deny access (no door access)
+        2               23                20
+# accesstask deny access (door schedule)
+        2               24                20
+# accesstask deny access (unknown reader)
+        2               26                20
+# accesstask deny access (card/PIN deleted)
+        2               27                20
+# accesstask deny access (wrong PIN)
+        2               29                20
+# accesstask timed anti-passback violation
+        2               30                 5
+# accesstask real anti-passback violation
+        2               31                 5
+# accesstask area violation
+        2               32                 5
+# accesstask deny access (door group/schedule not configured)
+        2               35                20
+# accesstask deny access (not active)
+        2               36                20
+# accesstask grant access (in-schedule elevator group)
+        2               37                 5
+# accesstask grant access (out-schedule elevator group)
+        2               38                 5
+# accesstask visitor message
+        2               39                20
+# accesstask post access processor grant
+        2               40                 5
+# accesstask post access processor deny
+        2               41                 5
+# accesstask pin lockout
+        2               42                 5
+# accesstask deny access (credential unassigned a cardholder)
+        2               43                20
+# accesstask reset cardholder status
+        2               45                10
+# accesstask card updated
+        2               50                 5
+# multi-man
+# accesstask mm rule not met
+        2               52                20
+# accesstask mm rule roleid invalid
+        2               53                20
+# accesstask mm max supported rules already active
+        2               54                20
+# accesstask mm rule sequence timeout
+        2               55                20
+# accesstask mm rule unknown error occured
+        2               56                20
+# accesstask mm rule roleids exceeded
+        2               57                20
+# accesstask mm rule roleids out of sequence
+        2               58                20
+# accesstask mm grant access
+        2               59                20
+# accesstask mm extended grant access
+        2               60                20
+# accesstask mm rule invalid for reader
+        2               61                20
+# accesstask mm rule soft entry out of sequence 
+        2               62                20
+# accesstask mm soft entry grant access
+        2               63                20
+# accesstask mm soft extended grant access
+        2               64                20
+# accesstask mm soft rule not met 
+        2               65                20
+# accesstask mm rule seq timed-out while waiting for pin                   
+        2               66                20
+# accesstask mm hard rule grant access
+        2               67                20
+# accesstask mm hard rule extended grant access
+        2               68                20
+# multi-man
+# rs485 start
+        3                1                10
+# rs485 interface function executed
+        3               20                 5
+# rs485 EEPROM values changed
+        3               70                 5
+# rs485 download interface program
+        3              120                10
+# rs485 download interface EEPROM
+        3              121                10
+# rs485 interface status
+        3              122                10
+# rs485 hio op mode change
+        3              123                10
+# io_linker start
+        4                1                10
+# eventlogger start
+        5                1                10
+# eventlogger upload current messages
+        5               20                 5
+# eventlogger upload entire event log file
+        5               21                 5
+# eventlogger message id counter rollover
+        5               23                 5
+# eventlogger upload current messages by class code
+        5               24                 5
+# eventlogger upload all messages by class code
+        5               25                 5
+# eventlogger upload messages by message id
+        5               26                 5
+# eventlogger upload current messages by priority
+        5               27                 5
+# eventlogger upload all messages by priority
+        5               28                 5
+# localio start
+        6                1                10
+# localio local function executed
+        6               21                 5
+# localio timer changed
+        6               73                 5
+# localio a/d limits changed
+        6               93                 5
+# localio debounce iterations changed
+        6               94                 5
+# localio poll delay changed
+        6               95                 5
+# monitor start
+        7                1                10
+# monitor set time
+        7               20                 5
+# monitor set TZ
+        7               21                 5
+# monitor restart a task
+        7               22                10
+# monitor stop a task
+        7               23                10
+# monitor root password is still the default
+        7               24                20
+# sndrtask start
+        8                1                10
+# rcvrtask start
+        9                1                10
+# commtask start
+       10                1                10
+# commtask invalid host called
+       10               30                20
+# CGI task changed a configuration file
+       12               24                 5
+# Software Management task started
+       13                1                 10
+# Software Management task executed update command
+       13               30                20
+# Serial Command Task started
+       14                1                10
+# Serial Command Task executed a macro command
+       14                30               10
+#Serial Command Task executed a serial command
+       14                31               10
+#Serial Command Task CSN sent to Host
+       14                32                5

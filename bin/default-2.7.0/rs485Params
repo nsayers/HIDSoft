@@ -1,0 +1,3 @@
+# rs485 Params configuration file
+# PollDelay ResponseTimeout NumberPrimaryPolls MaxTrys
+   20             20             4                4  

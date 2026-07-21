@@ -1,0 +1,55 @@
+#IO Linker Rules configuration file
+#               IO Linker Rules
+# ------------------------------------------------
+# Supported syntax: 
+# set <option>
+# ... and ...
+# <output> = <expression>
+# where output is:
+#   O(<interface>,<function_code>)                 - output (set/clear type)
+#   OM(<interface>,<function_code>)                - momentary output
+#   E(<msgnum>,<interface>,<class_code>)           - events to eventlogger
+#   ER(<msgnum>,<interface>,<reader>,<class_code>) - reader events to eventlogger
+#   G(<group_id>)                                  - activate output group
+#   L(<logical_id>)                                - set a logical value
+#   T(<timer_number>,<interval>,<timer_type>)      - define a timer
+#
+# and expressions are combinations of:
+#   I(<interface>,<status_bit>)                    - reflects status bit value
+#   I(<internal_id>,<interface>,<status_bit>)      - reflects status bit value
+#   L(<logical_id>)                                - logical bit value
+#   S(<schedule_number>)                           - true if in schedule
+#   T(<timer_number>)                              - reflects value of timer
+#
+set peer_notification_interval 300
+set schedule_poll_interval 60
+#
+# Send event message 901 for Door 1 Forced Door Alarm on IF 0
+#E(901,00,20)=I(00,25)
+# Send event message 902 for Door 2 Forced Door Alarm on IF 0
+#E(902,00,20)=I(00,27)
+# Send event message 903 for Door 1 Door Held Alarm on IF 0
+#E(903,00,20)=I(00,24)
+# Send event message 904 for Door 2 Door Held Alarm on IF 0
+#E(904,00,20)=I(00,26)
+# Send event message 910 for Tamper Switch Alarm on IF 0
+#E(910,00,20)=I(00,19)
+# Send event message 911 for AC Failure Alarm on IF 0
+#E(911,00,20)=I(00,21)
+# Send event message 912 for Battery Failure Alarm on IF 0
+#E(912,00,20)=I(00,23)
+# Send event message 915 when any tamper input point changes state
+#    ... add additional entry for each interface on the system
+#E(915,32,20)=I(32,8) | I(00,18)
+#
+# Open both doors on IF 0 on a schedule if logical set
+# G(1)=S(1) & L(12)
+# Aux 1 Relay track Door 1 Door Forced Alarm on IF 0 if logical set
+#O(00,01)=I(00,25) & L(21)
+# Aux 2 Relay on IF 0 when Not in Schedule and logical set
+#O(00,17)=!S(1) & L(30)
+#
+# NOTE: The following rule is required for UL compliance.
+# Trigger aux relay if tamper input changes state
+O(00,01)=I(00,19)
+

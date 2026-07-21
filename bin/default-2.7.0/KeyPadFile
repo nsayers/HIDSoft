@@ -1,0 +1,37 @@
+# Key Pad File config file
+# row definitions:
+# k key pad id number 
+# r raw value and normalized value
+# e end of key pad definition
+#
+# r RawValue NormalizedValue
+# HID Keypad
+k 1
+r      0x0       0
+r      0x1       1
+r      0x2       2
+r      0x3       3
+r      0x4       4
+r      0x5       5
+r      0x6       6
+r      0x7       7
+r      0x8       8
+r      0x9       9
+r      0xa     0xa
+r      0xb     0xb
+e
+#Essex Key pad
+k 2
+r      0xf0      0
+r      0xe1      1
+r      0xd2      2
+r      0xc3      3
+r      0xb4      4
+r      0xa5      5
+r      0x96      6
+r      0x87      7
+r      0x78      8
+r      0x69      9
+r      0x5a    0xa
+r      0x4b    0xb
+e

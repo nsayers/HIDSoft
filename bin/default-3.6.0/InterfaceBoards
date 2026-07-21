@@ -1,0 +1,7 @@
+# Interface Boards configuration file
+# IF  Type  EEPromName                                  TargetBaudRate
+  0    a  /mnt/flash/InterfaceConfig/V100EE_r110.hex  38400
+  1    i  /mnt/flash/InterfaceConfig/V200EE_r105.hex  38400
+  2    i  /mnt/flash/InterfaceConfig/V200EE_r105.hex  38400
+  3    i  /mnt/flash/InterfaceConfig/V200EE_r105.hex  38400
+  4    a  /mnt/flash/InterfaceConfig/V100EE_r110.hex  38400

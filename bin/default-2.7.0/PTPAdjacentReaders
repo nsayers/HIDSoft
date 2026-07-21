@@ -1,0 +1,7 @@
+# PTP Adjacent Readers configuration file
+# lists the internal ID of gateway boards that are adjacent to a reader
+# ReaderID  IID
+#     3      2
+#     4      2
+#     7      1
+#     8      1

@@ -1,0 +1,39 @@
+# This is the event logger tasks configuration file
+# it sets the parameters listed below when the task is created 
+# A = Event log file name
+A /dev/aasram
+# B = Event log file size
+B 5000
+# C = host IP address example:10.7.5.8 (up to 10 space-delimited IPs allowed)
+C 10.19.4.130 10.7.3.35
+# D = host port example:5000
+D 4075 
+# E = message send delay in seconds 
+E 2 
+# F = Encryption flag example:0 = no encyption, 1 = encryption
+F 0
+# G = download by # of msgs - download size = file size or 0 = turned off
+G 50
+# H = download time in minutes (whole #) - 0 = turned off
+H 10
+# J = Date Format 0 = US, 1 = EU
+J 0
+# K upper alarm level anything above is sent immediately
+K 150
+# L lower alarm level - anything above is reported
+# define lower alarm level for each of 3 communication channels 
+L 1 80
+L 2 100
+L 3 120
+# M 0-no msgs; 1-send to host; 2-send to syslog; 3-send to commtask; 4-request
+M 3
+# N message delimiter (1 character)
+N ;
+# P = download by time of day (hh:mm) up to 4 times a day - 0 = turned off
+P 10:00 0 0 0
+# Q = listen port
+Q 4055
+# R = minutes of inactivity before disconnect (range 5-120, 0=always connected)
+R 10
+# S = seconds before next connection retry if connect fails (range 15-3600)
+S 60

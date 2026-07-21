@@ -1,0 +1,9 @@
+# Watchdog configuration file
+# delay and wait times in minutes (range 1-1440)
+# (if delay or wait time = 0 then watchdog disabled for corresponding task)
+# delay is time to wait to send watchdog message to task
+# wait is time to wait for response from task before restarting the task
+# task     delay      wait
+ commtask    5         6
+ rs4850      5         5
+ rs4851      5         5

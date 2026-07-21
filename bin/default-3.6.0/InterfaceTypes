@@ -1,0 +1,4 @@
+# Interface Types configuration file
+# Type ProgramName                                LocationsFile
+a  /mnt/flash/InterfaceConfig/V100_r205.hex /mnt/flash/InterfaceConfig/AccessLocs
+i  /mnt/flash/InterfaceConfig/V200_r205.hex /mnt/flash/InterfaceConfig/InputLocs

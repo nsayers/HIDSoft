@@ -1,0 +1,15 @@
+# Holidays configuration file
+# HolidayGroup Month Day (Year)
+#     -- missing year implies every year
+ 1 1 1  # New Year's Day
+ 1 5 31 2019  
+ 1 6 11 2019
+ 1 6 12 2019
+ 1 6 13 2019
+ 1 6 14 2019
+ 1 6 15 2019
+
+# US Holidays
+    2       7    4      # Independence Day
+    2      12   25      # Christmas
+

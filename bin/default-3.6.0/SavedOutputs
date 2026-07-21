@@ -1,0 +1,13 @@
+# set of saved outputs
+#
+#v100 board recommended saved outputs
+#v100 0 1 10 11 14 16 17 26 27 160 161 162 163
+#v200 board recommended saved outputs
+#v200
+#v300 board recommended saved outputs
+#v300
+#format of savedoutputs line is:
+# boardno output1 output2 ... outputn 
+# 0 0 1 10 11 14 16 17 26 27 160 161 162 163
+
+

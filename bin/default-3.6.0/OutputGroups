@@ -1,0 +1,8 @@
+# Output Groups configuration file
+# grpid  IF  funcCode  state
+    1     0      11      0     # Disable forced door alarm 1
+    1     0       0      1     # Open Door 1
+    1     0      27      0     # Disable forced door alarm 2
+    1     0      16      1     # Open Door 2
+    2     0      11      0     # Disable forced door alarm 1
+    3     0      27      0     # Disable forced door alarm 2

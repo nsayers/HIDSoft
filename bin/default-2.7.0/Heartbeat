@@ -1,0 +1,5 @@
+# Heartbeat configuration file
+# heartbeat time in seconds (range 1-86400, 0=disabled)
+0
+# heartbeat message (0x00-0xFF)
+0xAA

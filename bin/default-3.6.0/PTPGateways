@@ -1,0 +1,5 @@
+# PTP Gateways configuration file 
+# maps each gateway IP to its internal ID
+#    GatewayIP    IID 
+# XXX.XXX.XXX.XXX  1 
+# XXX.XXX.XXX.XXX  2

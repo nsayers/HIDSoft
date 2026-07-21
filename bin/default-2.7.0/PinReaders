@@ -1,0 +1,4 @@
+# PIN Readers configuration file
+# IID IF  a AM PinSize TmLimit Tcode Ccode TryLim LockoutTime KeyPadType
+#  1   0  0  5    6      15     10    11     3        60         1
+#  1   0  1  5    6      15     10    11     3        60         1

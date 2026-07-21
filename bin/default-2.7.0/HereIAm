@@ -1,0 +1,3 @@
+# HereIAm configuration file
+# Here I Am time in seconds (range 20-86400, 0=disabled)
+20

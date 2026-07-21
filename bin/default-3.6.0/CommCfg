@@ -1,0 +1,22 @@
+#
+# commtask configuration parameters
+# ------------------------------------------------------
+# Connect to host on startup (1=>yes)
+connect_on_start 1
+# If contacted by a host, maintain connection without callback (1=>yes)
+maintain_host_connection 0
+# Call the host machine on this port
+connection_port 4070
+# Listen on this port for host connection requests
+listen_port 4050
+# If a connect attempt fails, wait this interval (~secs)
+# before attempting to connect to the next host in CommHosts
+reconnect_interval 15
+# If no messages are received from the host within this interval (~min) 
+# then disconnect. (timeout = 0 => no timeout, continuous connection)
+timeout 0
+# Encrypt host communications (0=no, 1=yes)
+use_encryption 0
+# If a response to a host request is not received within this time (~secs),
+# then disconnect.
+message_response_time 20

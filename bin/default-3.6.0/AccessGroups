@@ -1,0 +1,4 @@
+# Access Groups configuration file
+# accgrp d1 s1 d2 s2 d3 s3 d4 s4 d5 s5 d6 s6 d7 s7 d8 s8 d9 s9 d10 s10 ...
+     1    1  2  2  2  
+     2    1  1 
